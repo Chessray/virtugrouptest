@@ -1,5 +1,7 @@
 package com.thevirtugroup.postitnote.model;
 
+import java.util.Objects;
+
 public class User {
 
     private Long id;
@@ -38,5 +40,22 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        final User user = (User) o;
+        return Objects.equals(id, user.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

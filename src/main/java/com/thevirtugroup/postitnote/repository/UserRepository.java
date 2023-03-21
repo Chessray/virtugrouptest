@@ -7,11 +7,12 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserRepository {
 
-    private User defaultUser;
+    static final long DEFAULT_USER_ID = 999L;
+    private final User defaultUser;
 
     public UserRepository() {
         defaultUser = new User();
-        defaultUser.setId(999L);
+        defaultUser.setId(DEFAULT_USER_ID);
         defaultUser.setName("Johnny Tango");
         defaultUser.setPassword("password");
         defaultUser.setUsername("user");
