@@ -14,32 +14,36 @@ public class User {
         return id;
     }
 
-    public void setId(Long id) {
+    public User withId(Long id) {
         this.id = id;
+        return this;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public User withUsername(String username) {
         this.username = username;
+        return this;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public User withPassword(String password) {
         this.password = password;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public User withName(String name) {
         this.name = name;
+        return this;
     }
 
     @Override

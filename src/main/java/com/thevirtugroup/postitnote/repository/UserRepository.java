@@ -12,10 +12,10 @@ public class UserRepository {
 
     public UserRepository() {
         defaultUser = new User();
-        defaultUser.setId(DEFAULT_USER_ID);
-        defaultUser.setName("Johnny Tango");
-        defaultUser.setPassword("password");
-        defaultUser.setUsername("user");
+        defaultUser.withId(DEFAULT_USER_ID);
+        defaultUser.withName("Johnny Tango");
+        defaultUser.withPassword("password");
+        defaultUser.withUsername("user");
     }
 
     public User findUserByUsername(String username){
